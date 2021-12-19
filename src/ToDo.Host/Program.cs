@@ -21,7 +21,7 @@ app.UseHttpsRedirection();
 app.MapEndpoints();
 
 app.UseCors(policy =>
-        policy.WithOrigins("https://localhost:5011")
+        policy.WithOrigins("https://localhost:5011", "http://localhost:9000")
         .AllowAnyMethod()
         .WithHeaders(HeaderNames.ContentType, HeaderNames.Authorization)
         .AllowCredentials());
